@@ -17,18 +17,27 @@ namespace API.Controllers
         {
             _factorialService = factorialService;
         }
-        
+
         //api controller that handles http requests (This will get the method and then execute logic?)
         // Controller = manages the work
         // Service = Executes the work
         [HttpGet]
-        public IActionResult GetFactorial(int number) 
+        public IActionResult GetFactorial(int number)
         {
-        
-            int factorialResult = _factorialService.giveFactorial(number); //getting method through service?
-            return Ok(factorialResult);
 
-            //try catch if something goes bad
+            try
+            {
+                int factorialResult = _factorialService.giveFactorial(number); //getting method through service?
+                return Ok(factorialResult);
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+                throw;
+            }
+
+
 
         }
 
