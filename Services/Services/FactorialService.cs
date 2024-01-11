@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Services.Services
 {
-    internal class FactorialService : IFactorialService //inherit interface so we can get method in service
+    public class FactorialService : IFactorialService //inherit interface so we can get method in service
     {
 
         //logic for the factorial method
