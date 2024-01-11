@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Services.Interfaces
 {
-    internal interface IFactorialService
+    public interface IFactorialService //need to change to public to get access in controller constructor (note to self)
     {
 
         //method for calculating the factorial

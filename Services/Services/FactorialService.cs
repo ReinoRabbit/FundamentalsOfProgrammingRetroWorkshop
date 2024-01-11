@@ -14,11 +14,16 @@ namespace Services.Services
         //logic for the factorial method
         public int giveFactorial(int number)
         {
-            //for loop for adding numbers
+            //while loop for adding numbers
+            int result = 1;
+            while (number != 1)
+            {
+                result *= number;
+                number = number - 1;
+            }
 
-
-            //method needs return as its not void
-            return number;
+            //method needs return as its not void and contains result
+            return result;
         }
 
     }
